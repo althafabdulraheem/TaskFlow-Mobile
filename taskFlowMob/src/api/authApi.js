@@ -1,4 +1,4 @@
-const BASE_URL = 'http://127.0.0.1:8000/api';
+const BASE_URL = 'https://omnificcodes.com/althaf/task-flow/api';
 
 export const registerUser = async (data) => {
   const res = await fetch(`${BASE_URL}/register`, {

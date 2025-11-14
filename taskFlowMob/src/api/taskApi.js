@@ -1,5 +1,5 @@
 import AsyncStorage from '@react-native-async-storage/async-storage';
-const BASE_URL = 'http://127.0.0.1:8000/api';
+const BASE_URL = 'https://omnificcodes.com/althaf/task-flow/api';
 
 const getToken = async () => {
   const token = await AsyncStorage.getItem('token'); 
@@ -63,7 +63,7 @@ export const deleteTask = async (id) => {
 };
 
 export const toggleComplete = async (id, completed) => {
-  console.log(completed)
+  
   const token = await getToken();
   const res = await fetch(`${BASE_URL}/tasks/${id}`, {
     method: 'PUT',
